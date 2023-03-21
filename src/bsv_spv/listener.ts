@@ -66,10 +66,10 @@ export default async function main() {
     })
 
     listener.on("block_saved", ({ height, hash }) => {
-        listener.syncBlock(onBlock)
+        listener.syncBlocks(onBlock)
     })
 
-    listener.syncBlock(onBlock)
+    listener.syncBlocks(onBlock)
 
     listener.connect({ port })
 }
